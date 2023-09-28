@@ -3,7 +3,7 @@ import { join } from 'path';
 import forms from '@tailwindcss/forms';
 import typography from '@tailwindcss/typography';
 import { skeleton } from '@skeletonlabs/tw-plugin';
-import {nxito_theme}  from './themes/nxito_theme.ts';
+import { nxito_theme } from './themes/nxito_theme.ts';
 export default {
 	darkMode: 'class',
 	content: [
@@ -24,7 +24,7 @@ export default {
 						enhancements: true
 					}
 				],
-				custom: [nxito_theme ]
+				custom: [nxito_theme]
 			}
 		})
 	]

@@ -1,17 +1,20 @@
 <script>
-	export let username="" ; 
+	export let username = '';
 
-    let url = `https://www.instagram.com/${username}/?__a=1&__d=1`
+	let url = `https://www.instagram.com/${username}/?__a=1&__d=1`;
 
 	const fetchImage = (async () => {
-		const response = await fetch(url,{ mode: 'no-cors',  headers: {
-      'Content-Type': 'application/json',
-    //   "Access-Control-Allow-Origin": "*"
-     },})
-     const profile = await response.json()
-     console.log({profile})
-     return profile
-	})()
+		const response = await fetch(url, {
+			mode: 'no-cors',
+			headers: {
+				'Content-Type': 'application/json'
+				//   "Access-Control-Allow-Origin": "*"
+			}
+		});
+		const profile = await response.json();
+		console.log({ profile });
+		return profile;
+	})();
 </script>
 
 {#await fetchImage}
