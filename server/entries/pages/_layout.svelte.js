@@ -74,11 +74,6 @@ const Header = create_ssr_component(($$result, $$props, $$bindings, slots) => {
 const Theme = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   return `<main><h1 data-svelte-h="svelte-kjdymc">Selecciona un tema:</h1> <select class="bg-error-800"><option value="skeleton" data-svelte-h="svelte-l3roly">Predeterminado</option><option value="nxito_theme" data-svelte-h="svelte-1otkvga">@Nxito</option></select> </main>`;
 });
-const banner_svelte_svelte_type_style_lang = "";
-const avatar_svelte_svelte_type_style_lang = "";
-const info_svelte_svelte_type_style_lang = "";
-const details_svelte_svelte_type_style_lang = "";
-const main_svelte_svelte_type_style_lang = "";
 const GoogleTranslate = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   let { elementId = "google-translate-element" } = $$props;
   let { options = {
@@ -119,7 +114,6 @@ const Footer = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   )} <span class="text-black" data-svelte-h="svelte-1ur177i">Anxo Vilar Beiras</span></div></footer>`;
 });
 const Layout = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-  const prerender = true;
   storePopup.set({
     computePosition,
     autoUpdate,
@@ -128,6 +122,7 @@ const Layout = create_ssr_component(($$result, $$props, $$bindings, slots) => {
     flip,
     arrow
   });
+  const prerender = true;
   if ($$props.prerender === void 0 && $$bindings.prerender && prerender !== void 0)
     $$bindings.prerender(prerender);
   return `${validate_component(AppShell, "AppShell").$$render(
