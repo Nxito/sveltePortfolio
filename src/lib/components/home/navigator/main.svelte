@@ -57,12 +57,12 @@
 <article
 	class="card card-hover rounded-2xl grow ease-in m-3 w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/6 mb-4 grid grid-cols-4 gap-5 p-3"
 >
-	<h1 class="col-span-2  ">Algún proyecto en mente? </h1>
+	<h1 class="col-span-3  ">Algún proyecto en mente? </h1>
 	<h2 
 		class="bg-gradient-to-br from-tertiary-600 to-tertiary-300 bg-clip-text text-transparent box-decoration-clone col-span-2 "
 		>Contáctame en mis redes sociales!</h2
 	>
-	<div class=" grid grid-cols-4 gap-2 col-span-3 ">
+	<div class=" grid grid-cols-5 gap-2 col-span-3 max-h-[50px] self-end">
 		<a class="chip bg-primary-500 mr-5" href="https://wa.me/644161447" target="_blank"
 			><img src="/icons/tabler/brand-whatsapp.svg" class="invert   min-w-[30px]" alt="whatsapp" title="whatsapp"/></a
 		>
@@ -77,6 +77,11 @@
 			href="mailto:anxo97vb@gmail.com?subject=He visto tu perfil de githubPages!"
 			target="_blank"><img src="/icons/tabler/mail.svg" class="invert   min-w-[30px]" alt="gmail" title="email"/></a
 		>
+		<a
+		class="chip bg-primary-500 mr-5"
+		href="https://www.linkedin.com/in/anxo-vilar-beiras-59327b183/"
+		target="_blank"><img src="/icons/tabler/brand-linkedin.svg" class="invert   min-w-[30px]" alt="gmail" title="linkedin"/></a
+	>
 	</div>
 	<a href=  "#contact"  class="opacity-70 text-xs self-end" on:click|preventDefault={scrollIntoView}>o déjame un mensaje abajo</a>
 </article>

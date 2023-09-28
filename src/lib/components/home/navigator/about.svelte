@@ -7,8 +7,19 @@
 <article class="card card-hover main container mx-auto w-[98%]">
 	<h1 class="h1 uppercase">Sobre mí</h1>
 	<Accordion autocollapse>
+		
 		<div class="card">
 			<AccordionItem open>
+				<svelte:fragment slot="lead"><Icon src="/icons/tabler/user.svg" w="10" /></svelte:fragment>
+				<svelte:fragment slot="summary"><span class="h3 uppercase">Personal</span></svelte:fragment>
+				<svelte:fragment slot="content">
+					De Teo, Galicia, España. Me encanta tener perspectiva de muchos ámbitos para buscar las
+					mejores soluciones.</svelte:fragment
+				>
+			</AccordionItem>
+		</div>
+		<div class="card">
+			<AccordionItem >
 				<svelte:fragment slot="lead"><Icon src="/icons/tabler/music.svg " w="10" /></svelte:fragment
 				>
 				<svelte:fragment slot="summary"><span class="h3 uppercase">music</span></svelte:fragment>
@@ -40,16 +51,6 @@
 			</AccordionItem>
 		</div>
 
-		<div class="card">
-			<AccordionItem>
-				<svelte:fragment slot="lead"><Icon src="/icons/tabler/user.svg" w="10" /></svelte:fragment>
-				<svelte:fragment slot="summary"><span class="h3 uppercase">Personal</span></svelte:fragment>
-				<svelte:fragment slot="content">
-					De Teo, Galicia, España. Me encanta tener perspectiva de muchos ámbitos para buscar las
-					mejores soluciones.</svelte:fragment
-				>
-			</AccordionItem>
-		</div>
 	</Accordion>
 
 

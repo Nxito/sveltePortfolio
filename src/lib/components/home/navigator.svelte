@@ -36,8 +36,8 @@
 
 	<a  href="#contact" on:click|preventDefault={scrollIntoView}>Contacto</a>
  
-	<div class=" h-[1em] w-px self-center bg-neutral-100 opacity-100 dark:opacity-50"></div>
+	<!-- <div class=" h-[1em] w-px self-center bg-neutral-100 opacity-100 dark:opacity-50"></div>
 
 	<a  href="#projects" on:click|preventDefault={scrollIntoView}>Proyectos</a>
-	
+	 -->
 </nav>

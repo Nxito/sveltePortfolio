@@ -21,9 +21,9 @@
 	<section id="contact" class="flex flex-wrap scroll-mt-8">
 		<Contact/>
 	</section>
-	<section id="projects" class="flex flex-wrap scroll-mt-8">
+	<!-- <section id="projects" class="flex flex-wrap scroll-mt-8">
 		<Projects/>
-	</section>
+	</section> -->
 
 	
  
