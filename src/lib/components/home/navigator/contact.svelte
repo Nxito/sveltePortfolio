@@ -1,5 +1,5 @@
 <div
-	class="container card rounded-2xl grow basis-1/3 ease-in m-3 relative min-w-[550px] w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/6 mb-4  card-hover"
+	class="container card rounded-2xl grow basis-1/3 ease-in m-3 relative min-w-[550px] w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/6 mb-4  card-hover p-3"
 >
 	<h1 class="h1">CONTACTO</h1>
 

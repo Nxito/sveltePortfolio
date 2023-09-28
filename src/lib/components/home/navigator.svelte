@@ -1,11 +1,18 @@
 <script>
-	function scrollIntoView({ target }) {
-		  const el = document.querySelector(target.getAttribute('href'));
-		  if (!el) return;
-	  el.scrollIntoView({
-		behavior: 'smooth'
-	  });
+ 	function scrollIntoView({ target }) {
+		const el = document.querySelector(target.getAttribute('href'));
+		if (!el) return;
+		el.scrollIntoView({
+			behavior: 'smooth',
+			block :"start"
+		});  
+		var scrolledY = window.scrollY;
+		console.log({scrolledY});
+		if(scrolledY){
+		window.scroll(0, scrolledY - yourHeight);
+		}
 	}
+ 
   </script>
 
 <style>
@@ -14,12 +21,12 @@
 		align-items: flex-end;
 		flex-direction: row;
 		justify-content: center;
+		
  	}
- 
 </style>
 
 <nav class="list-nav" name="Navigator" >
-	<a  href="#main" on:click|preventDefault={scrollIntoView}>Inicio</a>
+	<a  href="#main" on:click|preventDefault={scrollIntoView} >Inicio</a>
 
 	<div class=" h-[1em] w-px self-center bg-neutral-100 opacity-100 dark:opacity-50"></div>
 	

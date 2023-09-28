@@ -11,6 +11,13 @@
 		// Defines which side of your trigger the popup will appear
 		placement: 'bottom'
 	};
+	function scrollIntoView({ target }) {
+		  const el = document.querySelector(target.getAttribute('href'));
+		  if (!el) return;
+	  el.scrollIntoView({
+		behavior: 'smooth', inline: "nearest" 
+	  });
+	}
 </script>
 
 <article
@@ -42,7 +49,7 @@
 	<img
 		class="w-full"
 		alt="stats"
-		src="https://github-readme-stats.vercel.app/api/top-langs/?username=Nxito&show_icons=true&count_private=true&theme=svelte&hide_border=true&bg_color=0D111700&text_color=0D1117&locale=es&layout=compact"
+		src="https://github-readme-stats.vercel.app/api/top-langs/?username=Nxito&show_icons=true&count_private=true&theme=svelte&hide_border=true&bg_color=0D111700&locale=es&layout=compact"
 	/>
 	<p class=" text-xs text-white text-opacity-50 text-end pr-3">powered by github</p>
 </article>
@@ -57,21 +64,21 @@
 	>
 	<div class=" grid grid-cols-4 gap-2 col-span-3 ">
 		<a class="chip bg-primary-500 mr-5" href="https://wa.me/644161447" target="_blank"
-			><img src="/icons/tabler/brand-whatsapp.svg" class="invert   min-w-[30px]" alt="whatsapp" /></a
+			><img src="/icons/tabler/brand-whatsapp.svg" class="invert   min-w-[30px]" alt="whatsapp" title="whatsapp"/></a
 		>
 		<button class="chip bg-primary-500 mr-5" use:popup={popupFeatured}
-			><img src="/icons/tabler/brand-discord.svg" class="invert   min-w-[30px]" alt="discord" /></button
+			><img src="/icons/tabler/brand-discord.svg" class="invert   min-w-[30px]" alt="discord" title="discord" /></button
 		>
 		<a class="chip bg-primary-500 mr-5 " href="https://www.instagram.com/anxovb" target="_blank"
-			><img src="/icons/tabler/brand-instagram.svg" class="invert   min-w-[30px]" alt="instagram" /></a
+			><img src="/icons/tabler/brand-instagram.svg" class="invert   min-w-[30px]" alt="instagram" title="instagram"  /></a
 		>
 		<a
 			class="chip bg-primary-500 mr-5"
 			href="mailto:anxo97vb@gmail.com?subject=He visto tu perfil de githubPages!"
-			target="_blank"><img src="/icons/tabler/mail.svg" class="invert   min-w-[30px]" alt="gmail" /></a
+			target="_blank"><img src="/icons/tabler/mail.svg" class="invert   min-w-[30px]" alt="gmail" title="email"/></a
 		>
 	</div>
-	<a href=  "#contact"  class="opacity-70 text-xs self-end">o déjame un mensaje abajo</a>
+	<a href=  "#contact"  class="opacity-70 text-xs self-end" on:click|preventDefault={scrollIntoView}>o déjame un mensaje abajo</a>
 </article>
 <div
 	class=" border-2 border-primary-500 bg-secondary-500 rounded-2xl w-100 shadow-xl z-40"

@@ -9,19 +9,19 @@
 	
  </script>
 
- <main class="container place-content-center">
- 	<section id="main" class="flex flex-wrap">
+ <main class="container place-content-center scroll-smooth  ">
+ 	<section id="main" class="flex flex-wrap scroll-mt-8">
 		<Main/>
 		
 	</section>
-	<section id="contact" class="flex flex-wrap">
-		<Contact/>
-	</section>
-	<section id="about" class="flex flex-wrap">
+
+	<section id="about" class="flex flex-wrap scroll-smooth scroll-mt-8">
 		<About/>
 	</section>
-
-	<section id="projects" class="flex flex-wrap">
+	<section id="contact" class="flex flex-wrap scroll-mt-8">
+		<Contact/>
+	</section>
+	<section id="projects" class="flex flex-wrap scroll-mt-8">
 		<Projects/>
 	</section>
 

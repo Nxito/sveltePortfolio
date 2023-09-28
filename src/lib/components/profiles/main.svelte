@@ -37,9 +37,7 @@
         border-color: rgb(227, 227, 227);
         border-style: solid;
     }
-    .vercel_stats{
-        text-align: center;
-    }
+
     @media all and (max-width: 1440px) {
         #card {
             width: 90%;
