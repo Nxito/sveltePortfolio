@@ -21,19 +21,23 @@
 		});
 	}
 </script>
-
+<style>
+	.text-anxo{
+		height: -webkit-fill-available;
+	}
+</style>
 <article
-	class="card card-hover p-3 rounded-2xl grow ease-in m-3 relative min-w-[550px] w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/6 mb-4"
+	class="card card-hover main container mx-auto min-w-[300px] w-[98%] relative grow w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/6 mb-4"
 >
 	<Avatar
 		class="  w-64 shadow-2xl grayscale  card-hover hover:grayscale-[40%] "
 		src="{base}/assets/images/anxo-transparent.png"
 	/>
 
-	<div class="  absolute top-40 left-40">
+	<div class=" text-anxo absolute w-full  flex  flex-col flex-nowrap justify-end content-end">
 		<!-- bg-gradient-to-r from-transparent  to-yellow-500  -->
 		<h1
-			class="h1 webkit-stroke bg-gradient-to-br font-bold from-secondary-900 to-secondary-500 bg-clip-text text-transparent box-decoration-clone whitespace-nowrap"
+			class="h2 drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] bg-gradient-to-br font-bold from-secondary-900 to-secondary-500 bg-clip-text text-transparent box-decoration-clone whitespace-nowrap"
 		>
 			Anxo Vilar Beiras
 		</h1>
@@ -41,7 +45,7 @@
 		<p
 			class="rounded drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] bg-gradient-to-r from-primary-500 from-50% to-transparent opacity-70"
 		>
-			Desarrollador FullStack | Técnico de automatización
+			Desarrollador FullStack<br/>Técnico de automatización
 		</p>
 	</div>
 </article>
@@ -131,9 +135,3 @@
 	<div class="arrow bg-primary-500 z-50" />
 </div>
 
-<style>
-	.webkit-stroke {
-		-webkit-text-stroke-width: 1px;
-		-webkit-text-stroke-color: black;
-	}
-</style>

@@ -5,7 +5,7 @@
 	import { Accordion, AccordionItem } from '@skeletonlabs/skeleton';
 </script>
 
-<article class="card card-hover main container mx-auto w-[98%]">
+<article class="card card-hover main container mx-auto w-[98%] w-full mb-4">
 	<h1 class="h1 uppercase">Sobre mí</h1>
 	<Accordion autocollapse>
 		<div class="card">
