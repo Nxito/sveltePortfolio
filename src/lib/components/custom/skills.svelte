@@ -44,7 +44,7 @@
 	<!-- Tab Panels --->
 	<svelte:fragment slot="panel">
 		{#if tabSet === 0}
-			<section class="grid grid-cols-5 gap-4 p-3">
+			<section class="grid grid-cols-7 gap-4 p-3">
 				<Icon src="{base}/icons/tabler/brand-nodejs.svg" />
 				<Icon src="{base}/icons/tabler/brand-javascript.svg" />
 				<Icon src="{base}/icons/tabler/brand-svelte.svg" />

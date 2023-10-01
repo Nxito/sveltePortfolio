@@ -50,7 +50,7 @@
 	</div>
 </article>
 <article
-	class="card card-hover rounded-2xl grow ease-in m-3 w-full min-w-[380px] sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/6 mb-4"
+	class="card card-hover rounded grow ease-in ml-[1%] w-full min-w-[380px] sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/6 mb-4"
 >
 	<img
 		class="w-full"
@@ -61,7 +61,7 @@
 </article>
 
 <article
-	class="card card-hover rounded-2xl grow ease-in m-3 w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/6 mb-4 grid grid-cols-4 gap-5 p-3"
+	class="card card-hover rounded  grow ease-in  ml-[1%] w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/6 mb-4 grid grid-cols-4 gap-5 p-3"
 >
 	<h1 class="col-span-3">Algún proyecto en mente?</h1>
 	<h2
