@@ -17,7 +17,7 @@
 					x-model="content"
 					title="Input (email)"
 					type="email"
-					placeholder="john@example.com"
+					placeholder="me@example.com"
 					autocomplete="email"
 					required
 				/>
@@ -29,7 +29,7 @@
 					name="Mensaje"
 					class="textarea"
 					rows="4"
-					placeholder="Lorem ipsum dolor sit amet consectetur adipisicing elit."
+					placeholder="Escríbeme!"
 				/>
 			</label>
 			<button class=" btn bg-primary-800 card-hover" type="submit"> <span>Enviar</span></button>

@@ -1,6 +1,7 @@
 <script>
 	import Icon from '$lib/components/custom/icon.svelte';
 	import Skills from '$lib/components/custom/skills.svelte';
+	import Hobbies from '$lib/components/custom/hobbies.svelte';
 	import { base } from '$app/paths';
 	import { Accordion, AccordionItem } from '@skeletonlabs/skeleton';
 </script>
@@ -16,22 +17,12 @@
 				<svelte:fragment slot="summary"><span class="h3 uppercase">Personal</span></svelte:fragment>
 				<svelte:fragment slot="content">
 					De Teo, Galicia, España. Me encanta tener perspectiva de muchos ámbitos para buscar las
-					mejores soluciones.</svelte:fragment
-				>
-			</AccordionItem>
-		</div>
-		<div class="card">
-			<AccordionItem>
-				<svelte:fragment slot="lead"
-					><Icon src="{base}/icons/tabler/music.svg " w="10" /></svelte:fragment
-				>
-				<svelte:fragment slot="summary"><span class="h3 uppercase">music</span></svelte:fragment>
-				<svelte:fragment slot="content">
-					<p>
-						Rock, electronic, house, y mas... Mis playlist son bastante variadas, y a veces dejo que
-						se mezcle de todo.
-					</p></svelte:fragment
-				>
+					mejores soluciones.
+
+					<div class="text-xs text-surface-400">
+						Para los de fuera de galicia : Mi nombre viene de ángel en gallego, la X se lee como "sh"
+					</div>
+				</svelte:fragment>
 			</AccordionItem>
 		</div>
 		<div class="card">
@@ -40,7 +31,9 @@
 					><Icon src="{base}/icons/tabler/apps-filled.svg" w="10" /></svelte:fragment
 				>
 				<svelte:fragment slot="summary"><span class="h3 uppercase">Skills</span></svelte:fragment>
-				<svelte:fragment slot="content"><Skills /></svelte:fragment>
+				<svelte:fragment slot="content">
+					<Skills />
+				</svelte:fragment>
 			</AccordionItem>
 		</div>
 		<div class="card">
@@ -50,8 +43,8 @@
 				>
 				<svelte:fragment slot="summary"><span class="h3 uppercase">Hobbies</span></svelte:fragment>
 				<svelte:fragment slot="content">
-					Videojuegos, series, quedar con amigos y escuchar música
-				</svelte:fragment>
+					<Hobbies/>
+					</svelte:fragment>
 			</AccordionItem>
 		</div>
 	</Accordion>

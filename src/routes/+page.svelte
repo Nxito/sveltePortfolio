@@ -9,7 +9,7 @@
 </script>
 
 <main class="container place-content-center scroll-smooth">
-	<section id="main" class="flex flex-wrap scroll-mt-8">
+	<section id="main" class="flex flex-wrap scroll-mt-8 mt-5">
 		<Main />
 	</section>
 

@@ -38,4 +38,7 @@
 		flex-direction: row;
 		justify-content: center;
 	}
+	a{
+		clip-path: ellipse(44% 30% at 50% 50%);
+	}
 </style>

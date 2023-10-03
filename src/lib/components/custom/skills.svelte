@@ -69,7 +69,9 @@
 			</section>
 		{:else if tabSet === 1}
 			<section>
-				Blender lo adoro para edicion 3D, pero he tocado tambien maya y autocad en los FP que he ido
+				Blender lo adoro para edicion 3D, pero he tocado tambien maya y autocad 
+				<br/>
+				<p class="text-xs text-surface-300">Este apartado esta en proceso: hará uso de ThreeJS para mostrar mas proyectos</p>
 			</section>
 		{:else if tabSet === 2}
 			<section>
@@ -79,6 +81,8 @@
 				Tengo visto como usar IA localmente para crear imagenes (algun dia me tirare unas tardes mirando
 				como crear alguna IA) <br />
 				Tengo usado FFMPEG para configurar camaras IP para un cliente en Tecdesoft<br />
+				<br/>
+				<p class="text-xs text-surface-300">Este apartado esta en proceso</p>
 			</section>
 		{/if}
 	</svelte:fragment>
