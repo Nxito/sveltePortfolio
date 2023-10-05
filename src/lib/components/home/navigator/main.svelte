@@ -31,7 +31,7 @@
 </script>
 
 <article
-	class=" card-hover main container mx-auto min-w-[300px] w-[98%] relative grow w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/6 mb-4"
+	class=" card-hover  container mx-auto min-w-[300px] w-[98%] relative grow w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/6 mb-4"
 >
 	<Avatar
 		class="  w-64 shadow-2xl grayscale  card-hover hover:grayscale-[40%] "
@@ -49,7 +49,7 @@
 		<p
 			class="rounded drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] bg-gradient-to-r from-primary-500 from-50% to-transparent opacity-70"
 		>
-			Desarrollador FullStack<br />Técnico de automatización
+			Desarrollador FullStack<br/>Técnico de automatización
 		</p>
 	</div>
 </article>
@@ -109,7 +109,7 @@
 				title="email"
 			/></a
 		>
-		<!-- <a
+		<a
 			class="chip bg-primary-500 mr-5"
 			href="https://www.linkedin.com/in/anxo-vilar-beiras-59327b183/"
 			target="_blank"
@@ -119,8 +119,8 @@
 				alt="gmail"
 				title="linkedin"
 			/></a
-		> -->
-		<script src="https://platform.linkedin.com/badges/js/profile.js" async defer type="text/javascript"></script>
+		>
+		<!-- <script src="https://platform.linkedin.com/badges/js/profile.js" async defer type="text/javascript"></script>
 		<button use:popup={popupFeatured_linkedin} class="chip bg-primary-500 mr-5"
 			>
 			<img
@@ -129,7 +129,7 @@
 				alt="linkedin"
 				title="linkedin"
 			/></button
-		>
+		> -->
 	</div>
 	<a href="#contact" class="opacity-70 text-xs self-end" on:click|preventDefault={scrollIntoView}
 		>o déjame un mensaje abajo</a

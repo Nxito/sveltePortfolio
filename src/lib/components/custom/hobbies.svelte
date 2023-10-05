@@ -98,13 +98,23 @@ let gamesData = {
 		url:"#" 
 	},
 	{
-		imageUrl:"https://cdn1.epicgames.com/min/offer/1200x1600-1200x1600-e92fa6b99bb20c9edee19c361b8853b9.jpg",
+		imageUrl:"https://image.api.playstation.com/vulcan/ap/rnd/202104/0517/9AcM3vy5t77zPiJyKHwRfnNT.png",
 		name:"Hades",
 		url:"#" 
 	},
 	{
 		imageUrl:"https://assetsio.reedpopcdn.com/-1412326629917.jpg?width=1200&height=1200&fit=bounds&quality=70&format=jpg&auto=webp",
 		name:"Tekken",
+		url:"#" 
+	},
+	{
+		imageUrl:"https://ih0.redbubble.net/image.2427878439.1598/raf,360x360,075,t,fafafa:ca443f4786.jpg",
+		name:"SubNautica",
+		url:"#" 
+	},
+	{
+		imageUrl:"https://image.api.playstation.com/cdn/EP0082/CUSA04480_00/P4ZghxHW2EEiwxim3ZZIG28aJB8LgebN.png",
+		name:"NieR: Automata",
 		url:"#" 
 	},
 	{
@@ -175,10 +185,13 @@ let gamesData = {
 			</section>
 		{:else if tabSet === 1}
 			<section> 
+				<div> No sabes que ver? Te recomiendo algunas de mis series favoritas! </div>
 				<Gallery bind:moviesData/>
 			</section>
 		{:else if tabSet === 2}
 			<section>
+				<div> No sabes con que juego pasar el rato? Estos son algunos de mis favoritos 😁 </div>
+
 				<Gallery bind:moviesData={gamesData}/>
 
 			</section>
