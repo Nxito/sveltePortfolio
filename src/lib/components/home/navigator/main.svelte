@@ -73,7 +73,7 @@
 	>
 		Contáctame en mis redes sociales!
 	</strong>
-	<div class=" grid grid-cols-5 gap-2 col-span-3 max-h-[50px] self-end">
+	<div class=" grid grid-cols-5 gap-2 col-span-4 max-h-[50px] self-end">
 		<a class="chip bg-primary-500 mr-5" href="https://wa.me/644161447" target="_blank"
 			><img
 				src="{base}/icons/tabler/brand-whatsapp.svg"

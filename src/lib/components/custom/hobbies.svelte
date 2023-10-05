@@ -171,13 +171,17 @@ let gamesData = {
 			Para mí, picar codigo y escuchar música van de la mano Escucho de todo, Rock, electronic,
 			house, y mas...<br/> Mis playlist son bastante variadas, y a veces dejo que se mezcle de todo.
 		<br/>
-		<button class="btn bg-surface-500 mt-3 mb-3" on:click={() => {showModal = true; activeModal="table"}}>Héchale un vistazo a mi gusto musical 🎶</button>
+		<button class="btn bg-surface-500 mt-3 mb-3" on:click={() => {showModal = true; activeModal="table"}}>
+			Ejemplo 🎶
+		</button>
 
 		</div>
 		<div>
 			También he hecho un visualizador de musica!
 			<br/>
-		<button class="btn bg-surface-500 mt-3 mb-3" on:click={() => {showModal = true; activeModal="musicvisualizer"}}>Héchale un vistazo!</button>
+		<button class="btn bg-surface-500 mt-3 mb-3" on:click={() => {showModal = true; activeModal="musicvisualizer"}}>
+			Héchale un vistazo!
+		</button>
 	</div>	
  
 
@@ -252,7 +256,7 @@ let gamesData = {
 					<button class="btn bg-surface-500 mt-3 mb-3 text-xs" on:click={() => {
 						music_visualizer_src="https://nxito-site-dev.fl0.io/api/display_music"
 						
-					}}>Mira también la version 2.1!</button>
+					}}>Mira como va la nueva versión!</button>
 
 				</div> 
 
