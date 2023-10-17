@@ -59,7 +59,7 @@
 	<img
 		class="w-full"
 		alt="stats"
-		src="https://github-readme-stats.vercel.app/api/top-langs/?username=Nxito&show_icons=true&count_private=true&theme=svelte&hide_border=true&bg_color=0D111700&locale=es&layout=compact"
+		src="https://github-readme-stats.vercel.app/api/top-langs/?username=Nxito&show_icons=true&count_private=true&theme=svelte&hide_border=true&bg_color=0D111700&locale=es&layout=compact&hide=NSIS"
 	/>
 	<p class=" text-xs text-white text-opacity-50 text-end pr-3">powered by github</p>
 </article>
