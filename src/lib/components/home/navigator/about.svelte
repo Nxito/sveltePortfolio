@@ -19,9 +19,6 @@
 					De Teo, Galicia, España. Me encanta tener perspectiva de muchos ámbitos para buscar las
 					mejores soluciones.
 
-					<div class="text-xs text-surface-400">
-						Para los de fuera de galicia : Mi nombre viene de ángel en gallego, la X se lee como "sh"
-					</div>
 				</svelte:fragment>
 			</AccordionItem>
 		</div>

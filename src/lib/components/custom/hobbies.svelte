@@ -5,19 +5,19 @@
 	import { Accordion, AccordionItem } from '@skeletonlabs/skeleton';
 	import { Paginator } from '@skeletonlabs/skeleton';
 	import { Table, tableMapperValues } from '@skeletonlabs/skeleton';
- 	import Table_data from '$lib/components/custom/list_pageable.svelte';
+	import Table_data from '$lib/components/custom/list_pageable.svelte';
 	import Modal from '$lib/components/custom/Modal.svelte';
 	import Gallery from '$lib/components/custom/gallery.svelte';
-
+	import Music_visualizer from '$lib/components/custom/music_visualizer/app.svelte';
 	let tabSet = 0;
 	let showModal = false;
-	let activeModal = "none";
-	let music_visualizer_src = "https://nxito-site-dev.fl0.io/api/musicvisualizer";
-// Apartado de musica
+	let activeModal = 'none';
+	let music_visualizer_src = 'https://nxito-site-dev.fl0.io/api/musicvisualizer';
+	// Apartado de musica
 	const MusicData = [
-		/*Rock y metal*/ 
+		/*Rock y metal*/
 		{ group: 'Bon Jovi', song: 'Story of my life' },
-		{ group:  'Franz ferdinand', song: 'this fire' },
+		{ group: 'Franz ferdinand', song: 'this fire' },
 		{ group: 'R.E.M', song: 'Losing my religion' },
 		{ group: 'Tenacius D', song: 'Tribute' },
 		{ group: 'Iron maiden', song: 'The trooper' },
@@ -42,8 +42,6 @@
 		{ group: 'Daft punk', song: 'get lucky' }
 	];
 
-
-
 	let page = {
 		page: 0,
 		limit: 5,
@@ -53,79 +51,91 @@
 	let tableHeaders = ['group', 'song'];
 
 	$: paginatedSource = MusicData.slice(
-	page.page * page.limit,             // start
-	page.page * page.limit + page.limit // end
-); 
-// apartado de series
-let moviesData={
-	movies:[{
-		imageUrl:"https://occ-0-5190-358.1.nflxso.net/dnm/api/v6/6AYY37jfdO6hpXcMjf9Yu5cnmO0/AAAABbKsEVDBpuQ9l8vP6TxAyPhwH7zMzT4o47373rCyAqwwtxVMPh5XgcDzb5mTWdkFqkooUAhf9_UvCjT1GrpdMkI9yQoAXj0T3CTq.jpg",
-		name:"Cortar por la línea de puntos",
-		url:"https://www.netflix.com/es/title/81304528?source=35" 
-	},
-	{
-		imageUrl:"https://occ-0-5190-358.1.nflxso.net/dnm/api/v6/6AYY37jfdO6hpXcMjf9Yu5cnmO0/AAAABbFg8Rh5qt2kFbh1e_QAO5a-HhV1Pu7CzZ4u2dEtaDvoM1ldpzCg6GdS2XOGRcD6_vC1y4pQt_fAzj09PVc1Sa0Ho6b0yMsNeo9P.jpg",
-		name:"Arcane ( league of legends)",
-		url:"https://www.netflix.com/es/title/81435684?source=35" 
-	},
-	{
-		imageUrl:"https://cdn-l-cyberpunk.cdprojektred.com/edgerunners/Cyberpunk-Edgerunners-S1-Poster-en.jpg",
-		name:"CyberPunk Edgerunners",
-		url:"https://www.netflix.com/watch/81054853?source=35" 
-	},
-	{
-		imageUrl:"https://somoskudasai.com/wp-content/uploads/2021/09/portada_fullmetal-alchemist-9.jpg",
-		name:"Full metal alchemist brotherhood",
-		url:"https://www.crunchyroll.com/es/series/GRGGPG93R/fullmetal-alchemist-brotherhood" 
-	},
-	{
-		imageUrl:"https://i.blogs.es/975f5e/the-last-of-us-hbo-max/1366_2000.jpeg",
-		name:"The Last of Us",
-		url:"https://play.hbomax.com/page/urn:hbo:page:GYyofRQHeuJ6fiQEAAAEy:type:series?source=googleHBOMAX&action=play" 
-	}
-]}
-// apartado de Juegos
-let gamesData = {
-	movies:[
-	{
-		imageUrl:"https://fs-prod-cdn.nintendo-europe.com/media/images/10_share_images/games_15/nintendo_switch_4/2x1_NSwitch_TloZTearsOfTheKingdom_Gamepage.jpg",
-		name:"the legend of zelda : tears of the kingdom",
-		url:"#" 
-	},
-	{
-		imageUrl:"https://assets-prd.ignimgs.com/2022/01/26/golden-sun-lost-age-button-1643159374336.jpg",
-		name:"Golden Sun: The lost age",
-		url:"#" 
-	},
-	{
-		imageUrl:"https://image.api.playstation.com/vulcan/ap/rnd/202104/0517/9AcM3vy5t77zPiJyKHwRfnNT.png",
-		name:"Hades",
-		url:"#" 
-	},
-	{
-		imageUrl:"https://assetsio.reedpopcdn.com/-1412326629917.jpg?width=1200&height=1200&fit=bounds&quality=70&format=jpg&auto=webp",
-		name:"Tekken",
-		url:"#" 
-	},
-	{
-		imageUrl:"https://ih0.redbubble.net/image.2427878439.1598/raf,360x360,075,t,fafafa:ca443f4786.jpg",
-		name:"SubNautica",
-		url:"#" 
-	},
-	{
-		imageUrl:"https://image.api.playstation.com/cdn/EP0082/CUSA04480_00/P4ZghxHW2EEiwxim3ZZIG28aJB8LgebN.png",
-		name:"NieR: Automata",
-		url:"#" 
-	},
-	{
-		imageUrl:"https://image.api.playstation.com/cdn/EP0700/CUSA08495_00/COYF3JBI46ftkG7tIdTjQg0v9aZ2378N.png",
-		name:"Dark Souls",
-		url:"#" 
-	}
-]}
+		page.page * page.limit, // start
+		page.page * page.limit + page.limit // end
+	);
+	// apartado de series
+	let moviesData = {
+		movies: [
+			{
+				imageUrl:
+					'https://occ-0-5190-358.1.nflxso.net/dnm/api/v6/6AYY37jfdO6hpXcMjf9Yu5cnmO0/AAAABbKsEVDBpuQ9l8vP6TxAyPhwH7zMzT4o47373rCyAqwwtxVMPh5XgcDzb5mTWdkFqkooUAhf9_UvCjT1GrpdMkI9yQoAXj0T3CTq.jpg',
+				name: 'Cortar por la línea de puntos',
+				url: 'https://www.netflix.com/es/title/81304528?source=35'
+			},
+			{
+				imageUrl:
+					'https://occ-0-5190-358.1.nflxso.net/dnm/api/v6/6AYY37jfdO6hpXcMjf9Yu5cnmO0/AAAABbFg8Rh5qt2kFbh1e_QAO5a-HhV1Pu7CzZ4u2dEtaDvoM1ldpzCg6GdS2XOGRcD6_vC1y4pQt_fAzj09PVc1Sa0Ho6b0yMsNeo9P.jpg',
+				name: 'Arcane ( league of legends)',
+				url: 'https://www.netflix.com/es/title/81435684?source=35'
+			},
+			{
+				imageUrl:
+					'https://cdn-l-cyberpunk.cdprojektred.com/edgerunners/Cyberpunk-Edgerunners-S1-Poster-en.jpg',
+				name: 'CyberPunk Edgerunners',
+				url: 'https://www.netflix.com/watch/81054853?source=35'
+			},
+			{
+				imageUrl:
+					'https://somoskudasai.com/wp-content/uploads/2021/09/portada_fullmetal-alchemist-9.jpg',
+				name: 'Full metal alchemist brotherhood',
+				url: 'https://www.crunchyroll.com/es/series/GRGGPG93R/fullmetal-alchemist-brotherhood'
+			},
+			{
+				imageUrl: 'https://i.blogs.es/975f5e/the-last-of-us-hbo-max/1366_2000.jpeg',
+				name: 'The Last of Us',
+				url: 'https://play.hbomax.com/page/urn:hbo:page:GYyofRQHeuJ6fiQEAAAEy:type:series?source=googleHBOMAX&action=play'
+			}
+		]
+	};
+	// apartado de Juegos
+	let gamesData = {
+		movies: [
+			{
+				imageUrl:
+					'https://fs-prod-cdn.nintendo-europe.com/media/images/10_share_images/games_15/nintendo_switch_4/2x1_NSwitch_TloZTearsOfTheKingdom_Gamepage.jpg',
+				name: 'the legend of zelda : tears of the kingdom',
+				url: '#'
+			},
+			{
+				imageUrl:
+					'https://assets-prd.ignimgs.com/2022/01/26/golden-sun-lost-age-button-1643159374336.jpg',
+				name: 'Golden Sun: The lost age',
+				url: '#'
+			},
+			{
+				imageUrl:
+					'https://image.api.playstation.com/vulcan/ap/rnd/202104/0517/9AcM3vy5t77zPiJyKHwRfnNT.png',
+				name: 'Hades',
+				url: '#'
+			},
+			{
+				imageUrl:
+					'https://assetsio.reedpopcdn.com/-1412326629917.jpg?width=1200&height=1200&fit=bounds&quality=70&format=jpg&auto=webp',
+				name: 'Tekken',
+				url: '#'
+			},
+			{
+				imageUrl:
+					'https://ih0.redbubble.net/image.2427878439.1598/raf,360x360,075,t,fafafa:ca443f4786.jpg',
+				name: 'SubNautica',
+				url: '#'
+			},
+			{
+				imageUrl:
+					'https://image.api.playstation.com/cdn/EP0082/CUSA04480_00/P4ZghxHW2EEiwxim3ZZIG28aJB8LgebN.png',
+				name: 'NieR: Automata',
+				url: '#'
+			},
+			{
+				imageUrl:
+					'https://image.api.playstation.com/cdn/EP0700/CUSA08495_00/COYF3JBI46ftkG7tIdTjQg0v9aZ2378N.png',
+				name: 'Dark Souls',
+				url: '#'
+			}
+		]
+	};
 </script>
-			
-
 
 <TabGroup
 	active="variant-filled-primary"
@@ -167,102 +177,109 @@ let gamesData = {
 	<svelte:fragment slot="panel">
 		{#if tabSet === 0}
 			<section class=" flex flex-wrap p-3 w-full">
-		<div> 
-			Para mí, picar codigo y escuchar música van de la mano Escucho de todo, Rock, electronic,
-			house, y mas...<br/> Mis playlist son bastante variadas, y a veces dejo que se mezcle de todo.
-		<br/>
-		<button class="btn bg-surface-500 mt-3 mb-3" on:click={() => {showModal = true; activeModal="table"}}>
-			Ejemplo 🎶
-		</button>
+				<div>
+					Para mí, picar codigo y escuchar música van de la mano Escucho de todo, Rock, electronic,
+					house, y mas...<br /> Mis playlist son bastante variadas, y a veces dejo que se mezcle de
+					todo.
+					<div />
+					<div>
+						<button
+							class="btn bg-surface-500 mt-3 mb-3"
+							on:click={() => {
+								showModal = true;
+								activeModal = 'table';
+							}}
+						>
+							Ejemplo 🎶
+						</button>
+						<div />
 
-		</div>
-		<div>
-			También he hecho un visualizador de musica!
-			<br/>
-		<button class="btn bg-surface-500 mt-3 mb-3" on:click={() => {showModal = true; activeModal="musicvisualizer"}}>
-			Héchale un vistazo!
-		</button>
-	</div>	
- 
-
-
+						<div>
+							También he hecho un visualizador de musica!
+							<div />
+							<div>
+								<button
+									class="btn bg-surface-500 mt-3 mb-3"
+									on:click={() => {
+										showModal = true;
+										activeModal = 'musicvisualizer';
+									}}
+								>
+									Héchale un vistazo!
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
 			</section>
 		{:else if tabSet === 1}
-			<section> 
-				<div> No sabes que ver? Te recomiendo algunas de mis series favoritas! </div>
-				<Gallery bind:moviesData/>
+			<section>
+				<div>No sabes que ver? Te recomiendo algunas de mis series favoritas!</div>
+				<Gallery bind:moviesData />
 			</section>
 		{:else if tabSet === 2}
 			<section>
-				<div> No sabes con que juego pasar el rato? Estos son algunos de mis favoritos 😁 </div>
+				<div>No sabes con que juego pasar el rato? Estos son algunos de mis favoritos 😁</div>
 
-				<Gallery bind:moviesData={gamesData}/>
-
+				<Gallery bind:moviesData={gamesData} />
 			</section>
 		{/if}
 	</svelte:fragment>
 </TabGroup>
 
-
-
-<Modal bind:showModal  bind:activeModal dialogId="table">
-	<div slot="header"> Listado de algunas canciones que me gustan</div>
+<Modal bind:showModal bind:activeModal dialogId="table">
+	<div slot="header">Listado de algunas canciones que me gustan</div>
 	<div class="w-300 border-1 border-slate-50 bg-red">
-					
-		<Table_data >
-			<svelte:fragment slot="table"> 
+		<Table_data>
+			<svelte:fragment slot="table">
 				<div class="table-container">
-				<Table source={{
-					// A list of heading labels.
-					head: tableHeaders,
-					// The data visibly shown in your table body UI.
-					body: tableMapperValues(paginatedSource, tableHeaders),
-					// Optional: The data returned when interactive is enabled and a row is clicked.
-					meta: tableMapperValues(paginatedSource, tableHeaders),
-					// Optional: A list of footer labels.
-					// foot: ['Total', '', '<code class="code">5</code>']
-				}} />
-				 </div>
-				<hr  class="m-2"/>
+					<Table
+						source={{
+							// A list of heading labels.
+							head: tableHeaders,
+							// The data visibly shown in your table body UI.
+							body: tableMapperValues(paginatedSource, tableHeaders),
+							// Optional: The data returned when interactive is enabled and a row is clicked.
+							meta: tableMapperValues(paginatedSource, tableHeaders)
+							// Optional: A list of footer labels.
+							// foot: ['Total', '', '<code class="code">5</code>']
+						}}
+					/>
+				</div>
+				<hr class="m-2" />
 				<Paginator
-				bind:settings={page}
-				showFirstLastButtons={false}
-				showPreviousNextButtons={true}
-			/> 
+					bind:settings={page}
+					showFirstLastButtons={false}
+					showPreviousNextButtons={true}
+				/>
 			</svelte:fragment>
 		</Table_data>
-	 
 	</div>
 </Modal>
 
-<Modal bind:showModal  bind:activeModal dialogId="musicvisualizer">
+<Modal bind:showModal bind:activeModal dialogId="musicvisualizer">
 	<div slot="header"><strong>Music Visualizer</strong></div>
 	<div class="w-300 border-1 border-slate-50 bg-red self-center flex">
-					
-		<Table_data >
-			<svelte:fragment slot="table">  
-				<iframe
+		<Table_data>
+			<svelte:fragment slot="table">
+				<!-- <iframe
 					id="music-iframe"
 					class="min-w-[500px] min-h-[500px] w-full rounded-2xl "
 					src={music_visualizer_src}
 					title="musicVisualizer">No se ve el iframe</iframe
-				>
-				<div class="text-xs"> Click en el logo pausa e inicia el audio
-					<br/>
+				> -->
+				<Music_visualizer />
+				<div class="text-xs">
+					Click en el logo pausa e inicia el audio
+					<br />
 					Click en los laterales avanza o retrocede
-					<br/>
+					<br />
 					Los audios seleccionados para mostrar no tienen copyright
-					<br/>
-					<button class="btn bg-surface-500 mt-3 mb-3 text-xs" on:click={() => {
-						music_visualizer_src="https://nxito-site-dev.fl0.io/api/display_music"
-						
-					}}>Mira como va la nueva versión!</button>
-
-				</div> 
+					<br />
+				</div>
 
 				<!-- /src="https://nxito-site-dev.fl0.io/api/display_music" -->
 			</svelte:fragment>
 		</Table_data>
-	 
 	</div>
 </Modal>
