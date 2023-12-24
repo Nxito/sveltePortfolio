@@ -54,18 +54,18 @@
 	</div>
 </article>
 <article
-	class="  card-hover rounded grow ease-in  w-full min-w-[380px] sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/6 mb-4"
+	class="  card  card-hover rounded grow ease-in  w-full min-w-[380px] sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/6 mb-4"
 >
 	<img
-		class="w-full"
+		class="w-full "
 		alt="stats"
-		src="https://github-readme-stats.vercel.app/api/top-langs/?username=Nxito&show_icons=true&count_private=true&theme=svelte&hide_border=true&bg_color=0D111700&locale=es&layout=compact&hide=NSIS"
+		src="https://github-readme-stats.vercel.app/api/top-langs/?username=Nxito&show_icons=true&count_private=true&theme=svelte&hide_border=true&bg_color=0D111700&text_color=FFFFFF&locale=es&layout=compact&hide=NSIS"
 	/>
-	<p class=" text-xs text-white text-opacity-50 text-end pr-3">powered by github</p>
+	<p class=" text-xs text-white text-opacity-50 text-end pr-3">powered by: github vercel stats</p>
 </article>
 
 <article
-	class="  card-hover rounded grow ease-in  w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/6 mb-4 grid grid-cols-4 gap-5 p-3"
+	class="  card  card-hover rounded grow ease-in  w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/6 mb-4 grid grid-cols-4 gap-5 p-3"
 >
 	<h1 class="col-span-3">Algún proyecto en mente?</h1>
 	<strong

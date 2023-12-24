@@ -8,7 +8,8 @@
 	import Contact from '$lib/components/home/navigator/contact.svelte';
 </script>
 
-<main class="container place-content-center scroll-smooth">
+
+<main class="container place-content-center scroll-smooth max-w-screen-md">
 	<section id="main" class="flex flex-wrap scroll-mt-8 mt-5">
 		<Main />
 	</section>

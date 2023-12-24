@@ -1,1 +1,1 @@
-Este proyecto estaba ubicado en Fl0, pero como esta web no e consistente manteniendo proyectos de forma gratuita, decidi integrarlo en el portfolio
+Este proyecto estaba ubicado en Fl0, pero como esta web no e consistente manteniendo proyectos de forma gratuita, decidi integrarlo en el

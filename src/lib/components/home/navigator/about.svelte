@@ -7,7 +7,7 @@
 </script>
 
 <article class="card card-hover main container mx-auto w-[98%] w-full mb-4">
-	<h1 class="h1 uppercase">Sobre mí</h1>
+	<h1 class="h1 uppercase m-3">Sobre mí</h1>
 	<Accordion autocollapse>
 		<div class="card">
 			<AccordionItem open>
@@ -16,8 +16,15 @@
 				>
 				<svelte:fragment slot="summary"><span class="h3 uppercase">Personal</span></svelte:fragment>
 				<svelte:fragment slot="content">
-					De Teo, Galicia, España. Me encanta tener perspectiva de muchos ámbitos para buscar las
-					mejores soluciones.
+					<ul class = "list-disc list-inside">
+						<li>De Galicia, España</li>
+						<li>Formado en un Ciclo superior de robotica y automatizacion industrial</li>
+						<li>Autodidacta al que le gusta aprender y probar cosas nuevas</li>
+						<li>Mas de 4 años de experiencia laboral en tecnologias como nodejs, jquery, node-red y docker </li>
+
+						<li>Experiencia con sveltekit, golang y otras tecnologias  </li>
+
+					</ul>
 
 				</svelte:fragment>
 			</AccordionItem>
